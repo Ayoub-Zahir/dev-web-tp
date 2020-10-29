@@ -1,5 +1,6 @@
 // UI Var
 const detailFormation = document.querySelectorAll('.detail-formation');
+const detailCompetence = document.querySelectorAll('.competence .description');
 
 // Hide formation details
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,15 +11,16 @@ window.addEventListener('DOMContentLoaded', () => {
         subTitle.style.display = 'none';
         description.style.display = 'none';
     });
-})
+});
 
-// Event handler
+// Event handler Question 1
 detailFormation.forEach(element => {
     element.addEventListener('click', (e) => {
         e.preventDefault();
 
-        const subTitle = e.target.parentElement.parentElement.parentElement.children[1];
-        const description = e.target.parentElement.parentElement.parentElement.children[2];
+        const formation = e.target.parentElement.parentElement.parentElement;
+        const subTitle = formation.children[1];
+        const description = formation.children[2];
 
         // Show details
         if (window.getComputedStyle(subTitle).display === 'none' && window.getComputedStyle(description).display === 'none') {
@@ -59,3 +61,16 @@ const hideDetails = (formation) => {
         }
     });
 }
+
+// Event handler Question 2
+detailCompetence.forEach(element => {
+    element.addEventListener('mouseover', (e) => {
+        if (e.target.children[0])
+            e.target.children[0].style.display = 'block';
+    });
+
+    element.addEventListener('mouseout', (e) => {
+        if (e.target.children[0])
+            e.target.children[0].style.display = 'none';
+    });
+});
