@@ -19,36 +19,36 @@
 <body>
     <div id="wrapper">
 
-        <header class="banner">
+        <header itemscope class="banner">
             <div class="img-profile">
-                <img src="img/profile.jpg" alt="img-profile">
+                <img itemprop="image" src="img/profile.jpg" alt="img-profile">
             </div>
             <div class="title">
-                <h1>ayoub zahir</h1>
-                <h2>full stack developer</h2>
+                <h1 itemprop="name">ayoub zahir</h1>
+                <h2 itemprop="jobTitle">full stack developer</h2>
             </div>
         </header>
 
         <div class="grid-container">
             <div class="grid-item">
-                <section class="contact">
+                <section itemscope class="contact">
                     <h2 class="section-header">contact</h2>
                     <ul>
                         <li>
-                            <i class="fas fa-mobile"></i> +33 6 69 63 46
+                            <i itemprop="telephone" class="fas fa-mobile"></i> +33 6 69 63 46
                         </li>
                         <li>
-                            <i class="far fa-envelope"></i> ayoub.zahir.you@gmail.com
+                            <i itemprop="email" class="far fa-envelope"></i> ayoub.zahir.you@gmail.com
                         </li>
                         <li>
-                            <i class="fas fa-map-marker-alt"></i> 4 rue des archives, 29200 Brest
+                            <i itemprop="address" class="fas fa-map-marker-alt"></i> 4 rue des archives, 29200 Brest
                         </li>
                     </ul>
                 </section>
 
-                <section class="competence">
+                <section itemscope class="competence">
                     <h2 class="section-header">competence</h2>
-                    <dl>
+                    <dl itemprop="knowsAbout">
                         <dt class="mt-1 title">Front-end Framework</dt>
                         <dt class="description">Angular 9</dt>
 
@@ -69,9 +69,9 @@
                     </dl>
                 </section>
 
-                <section class="language">
+                <section itemscope class="language">
                     <h2 class="section-header">langues</h2>
-                    <ul>
+                    <ul itemprop="knowsLanguage">
                         <li class="py-s">Francais</li>
                         <li class="py-s">Anglai</li>
                         <li class="py-s">Arabe</li>
