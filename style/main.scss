@@ -56,6 +56,18 @@ body {
     }
 }
 
+.formation {
+    .title {
+        .detail-formation {
+            margin-left: .5rem;
+            .fas {
+                font-size: 1.5rem;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
 footer {
     background-color: $dark-color;
     height: 10vh;

@@ -20,9 +20,6 @@
 }
 
 @media only screen and (max-width: 570px) {
-  #wrapper {
-    text-align: center;
-  }
   .hobbies {
     margin-bottom: 0 !important;
   }

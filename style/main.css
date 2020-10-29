@@ -219,6 +219,15 @@ body {
   padding: .6rem 0;
 }
 
+.formation .title .detail-formation {
+  margin-left: .5rem;
+}
+
+.formation .title .detail-formation .fas {
+  font-size: 1.5rem;
+  color: #2969cf;
+}
+
 footer {
   background-color: #646464;
   height: 10vh;
