@@ -1,6 +1,14 @@
 // UI Var
 const detailFormation = document.querySelectorAll('.detail-formation');
 const detailCompetence = document.querySelectorAll('.competence .description');
+const evaluation = {
+    angular: 4,
+    php: 4,
+    javaEE: 3,
+    firebase: 3,
+    git: 4,
+    jira: 3
+};
 
 // Hide formation details
 window.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
         subTitle.style.display = 'none';
         description.style.display = 'none';
     });
+
+    displayStars();
 });
 
 // Event handler Question 1
@@ -65,12 +75,35 @@ const hideDetails = (formation) => {
 // Event handler Question 2
 detailCompetence.forEach(element => {
     element.addEventListener('mouseover', (e) => {
-        if (e.target.children[0])
-            e.target.children[0].style.display = 'block';
+        for (let i = 0; i < e.target.children.length; i++) {
+            if (e.target.children[i] && e.target.children[i].className === 'tooltip')
+                e.target.children[i].style.display = 'block';
+        }
     });
 
     element.addEventListener('mouseout', (e) => {
-        if (e.target.children[0])
-            e.target.children[0].style.display = 'none';
+        for (let i = 0; i < e.target.children.length; i++) {
+            if (e.target.children[i] && e.target.children[i].className === 'tooltip')
+                e.target.children[i].style.display = 'none';
+        }
     });
 });
+
+// Event handler Question 3
+
+const displayStars = () => {
+    for (const [key, value] of Object.entries(evaluation)) {
+
+        for (let i = 0; i < value; i++) {
+            const competence = document.getElementById(key);
+
+            let i = document.createElement('i');
+
+            // Add class name
+            i.className = "far fa-star";
+
+            // Append star icon into competence
+            competence.appendChild(i);
+        }
+    }
+};

@@ -241,6 +241,11 @@ body {
   left: -4rem;
 }
 
+.competence .description .far {
+  font-size: 1.5rem;
+  color: #2969cf;
+}
+
 .formation .title .detail-formation {
   margin-left: .5rem;
 }
